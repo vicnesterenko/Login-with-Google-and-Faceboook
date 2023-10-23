@@ -1,0 +1,23 @@
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Social Login</title>
+    <link rel="stylesheet" href="{% static "user.css" %}"/>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Social Login</h1>
+            {{user}}
+            <button><a href="{% provider_login_url "google" %}">Google Login</a></button>
+            <button><a href="{% url 'social:begin' 'facebook' %}">Facebook Login</a></button>
+        </div>
+    </div>
+</body>
+
+</html>
