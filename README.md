@@ -95,7 +95,7 @@ For Facebook authentification we need a secure connection(https). To run the ser
 
    ### About problems with Facebook authentification
 
-   Facebook brings some problems with domains when I deploy it in [Pythonenywhere platform](https://www.pythonanywhere.com/). In local usage, it makes authentification for Facebook.
+   Facebook brings some problems with domains when I deploy it in [Pythonanywhere platform](https://www.pythonanywhere.com/). In local usage, it makes authentification for Facebook.
 
    Also, you can check about this problem here [Domains problem in Facebook](https://github.com/python-social-auth/social-app-django/issues/163).
 
