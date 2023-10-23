@@ -147,25 +147,6 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = "/"
 
-try:
-    from crm_main.local_settings import *
-except ImportError:
-    pass
-
-LOGIN_REDIRECT_URL = "dashboard"
-
-# This will print email in Console.
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
-from django.contrib.messages import constants as messages
-
-MESSAGE_TAGS = {
-    messages.DEBUG: "alert-info",
-    messages.INFO: "alert-info",
-    messages.SUCCESS: "alert-success",
-    messages.WARNING: "alert-warning",
-    messages.ERROR: "alert-danger",
-}
 
 SOCIAL_AUTH_FACEBOOK_KEY = "697916311951329"  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = "f5b8b62a37114392d250a89d2095923b"  # App Secret
