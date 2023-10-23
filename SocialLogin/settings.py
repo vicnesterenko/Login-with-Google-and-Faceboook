@@ -47,10 +47,9 @@ INSTALLED_APPS = [
     # providers
     "allauth.socialaccount.providers.facebook",
     "allauth.socialaccount.providers.google",
+    "django_extensions",
 ]
-THIRD_PARTY_APPS = [
-    "social_django",
-]
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -61,7 +60,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "allauth.account.middleware.AccountMiddleware",
-    "social_django.middleware.SocialAuthExceptionMiddleware",
 ]
 
 ROOT_URLCONF = "SocialLogin.urls"
@@ -77,19 +75,12 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "social_django.context_processors.backends",  # <-- Here
-                "social_django.context_processors.login_redirect",  # <-- Here
             ],
         },
     },
 ]
 
-AUTHENTICATION_BACKENDS = (
-    "social_core.backends.facebook.FacebookOAuth2",
-    "social_core.backends.twitter.TwitterOAuth",
-    "social_core.backends.github.GithubOAuth2",
-    "django.contrib.auth.backends.ModelBackend",
-)
+AUTHENTICATION_BACKENDS = ("django.contrib.auth.backends.ModelBackend",)
 
 WSGI_APPLICATION = "SocialLogin.wsgi.application"
 
@@ -146,7 +137,3 @@ STATIC_URL = "/static/"
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = "/"
-
-
-SOCIAL_AUTH_FACEBOOK_KEY = "697916311951329"  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = "f5b8b62a37114392d250a89d2095923b"  # App Secret

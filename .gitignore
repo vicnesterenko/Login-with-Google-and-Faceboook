@@ -9,5 +9,9 @@ media/
 staticfiles/
 
 # Ignore virtual environment folders
-myenv/
+env/
+
+# Ignore
+selftest-cert.crt
+selftest-cert.key
 
