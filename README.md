@@ -90,7 +90,7 @@ For Facebook authentification we need a secure connection(https). To run the ser
 2. **Run server with this command**:
 
    ```bash
-   python manage.py runserver_plus --key-file selftest-key --cert-file selftest-cert localhost:800
+   python manage.py runserver_plus --key-file selftest-key --cert-file selftest-cert localhost:8000
    ```
 
    ### About problems with Facebook authentification
